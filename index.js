@@ -3,9 +3,10 @@ import cors from "cors"
 import mongoose from "mongoose"
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded())
-app.use(cors())
+
 
 mongoose.connect("mongodb+srv://useruser:adminadmin@cluster0.t5lhczx.mongodb.net/?retryWrites=true&w=majority/myLoginRegisterDB", {
     useNewUrlParser: true,
